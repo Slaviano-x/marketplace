@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="adding_product">Добавление товара</string>
+    <string name="image_link">Ссылка на изображение</string>
+    <string name="name">Наименование</string>
+    <string name="price">Стоимость</string>
+    <string name="add_button">Добавить</string>
+    <string name="note_header">Примечание</string>
+    <string name="note">1. Поля \"Наименование\" и \"Стоимость\" обязательны для заполнения; \n2. Если изображение не было выбрано, то будет установлено изображение по умочанию;</string>
+</resources>

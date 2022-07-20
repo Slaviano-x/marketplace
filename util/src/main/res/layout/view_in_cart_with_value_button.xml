@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/inCartButton"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/grey2"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/add_in_cart"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/removeBtn"/>
+
+    <ProgressBar
+        android:id="@+id/buttonProgress"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center"
+        android:elevation="3dp"
+        android:indeterminateTint="@color/purple_500"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@+id/inCartButton"
+        app:layout_constraintStart_toStartOf="@+id/inCartButton"
+        app:layout_constraintBottom_toBottomOf="@+id/inCartButton"
+        app:layout_constraintEnd_toEndOf="@+id/inCartButton" />
+
+    <ImageButton
+        android:id="@+id/removeBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_remove"
+        android:background="@drawable/background_rounded_left"
+        app:layout_constraintStart_toEndOf="@+id/inCartButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/valueProduct"
+        android:visibility="gone"
+        tools:ignore="ContentDescription" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/valueProduct"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="centerCrop"
+        android:gravity="center"
+        android:text="@string/value_0"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:background="@color/teal_200"
+        app:layout_constraintStart_toEndOf="@+id/removeBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/addBtn"
+        android:visibility="gone"/>
+
+    <ImageButton
+        android:id="@+id/addBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_add"
+        android:background="@drawable/background_rounded_right"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toEndOf="@+id/valueProduct"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        tools:ignore="ContentDescription" />
+</merge>

@@ -1,0 +1,13 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+}
+
+apply from: "$project.rootDir/codequality/ktlint.gradle"
+apply from: "$project.rootDir/config/module-config.gradle"
+
+dependencies {
+    implementation project(":feature-addproduct-api")
+    implementation project(":feature-products-api")
+    implementation project(":feature-pdp-api")
+}

@@ -1,0 +1,31 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+apply from: "$project.rootDir/codequality/ktlint.gradle"
+apply from: "$project.rootDir/config/module-config.gradle"
+
+dependencies {
+    implementation libs.bundles.commonBundle
+    implementation libs.bundles.featureBundle
+    implementation libs.bundles.testBundle
+    implementation libs.constraintlayout
+    implementation libs.adapterDelegate
+    implementation libs.coil
+    implementation libs.dagger
+    kapt libs.daggerCompiler
+    implementation libs.worker
+    implementation libs.bundles.retrofitBundle
+    implementation libs.bundles.okhttpBundle
+    implementation libs.rxkotlin
+    implementation libs.rxandroid
+
+    implementation project(":core")
+    implementation project(":core-data-api")
+    implementation project(":core-network-api")
+    implementation project(":feature-products-api")
+    implementation project(":util")
+    implementation project(":work-manager-api")
+}

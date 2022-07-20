@@ -1,0 +1,4 @@
+<resources>
+    <string name="description_header">Описание</string>
+    <string name="currency">%1$s ₽</string>
+</resources>

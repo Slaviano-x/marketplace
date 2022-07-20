@@ -1,0 +1,25 @@
+android {
+    compileSdkVersion libs.versions.compile.sdk.version.get().toInteger()
+
+    defaultConfig {
+        minSdk libs.versions.min.sdk.version.get().toInteger()
+        targetSdk libs.versions.target.sdk.version.get().toInteger()
+        versionCode libs.versions.version.code.get().toInteger()
+        versionName libs.versions.version.name.get()
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+}

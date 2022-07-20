@@ -1,0 +1,33 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+enableFeaturePreview("VERSION_CATALOGS")
+rootProject.name = "marketplace"
+include ':app'
+include ':core'
+include ':core-navigation-api'
+include ':core-navigation-impl'
+include ':core-network-api'
+include ':core-network-impl'
+include ':feature-addproduct-api'
+include ':feature-addproduct-impl'
+include ':feature-products-impl'
+include ':feature-products-api'
+include ':feature-pdp-api'
+include ':feature-pdp-impl'
+include ':util'
+include ':work-manager-api'
+include ':work-manager-impl'
+include ':core-data-api'
+include ':core-data-impl'

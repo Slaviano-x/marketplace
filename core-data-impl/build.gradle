@@ -1,0 +1,17 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+
+apply from: "$project.rootDir/codequality/ktlint.gradle"
+apply from: "$project.rootDir/config/module-config.gradle"
+
+dependencies {
+    implementation libs.dagger
+    kapt libs.daggerCompiler
+    implementation libs.moshi
+
+    implementation project(":core-data-api")
+    implementation project(":util")
+}

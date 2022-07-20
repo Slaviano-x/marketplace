@@ -1,0 +1,11 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+apply from: "$project.rootDir/codequality/ktlint.gradle"
+apply from: "$project.rootDir/config/module-config.gradle"
+
+dependencies {
+    implementation libs.moshi
+}

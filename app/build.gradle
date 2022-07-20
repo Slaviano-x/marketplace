@@ -1,0 +1,35 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+apply from: "$project.rootDir/codequality/ktlint.gradle"
+apply from: "$project.rootDir/config/module-config.gradle"
+
+android {
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation libs.bundles.commonBundle
+    implementation libs.bundles.testBundle
+    implementation libs.dagger
+    kapt libs.daggerCompiler
+    implementation libs.worker
+    implementation libs.bundles.retrofitBundle
+    implementation libs.bundles.okhttpBundle
+
+    implementation project(":core-navigation-impl")
+    implementation project(":core-data-api")
+    implementation project(":core-data-impl")
+    implementation project(":core-network-api")
+    implementation project(":core-network-impl")
+    implementation project(":work-manager-impl")
+    implementation project(":util")
+}
